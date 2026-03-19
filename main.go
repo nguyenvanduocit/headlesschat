@@ -47,7 +47,7 @@ var (
 )
 
 func main() {
-	http.HandleFunc("GET /skill", handleSkill)
+	http.HandleFunc("GET /SKILL.md", handleSkill)
 	http.HandleFunc("POST /rooms", handleCreateRoom)
 	http.HandleFunc("GET /rooms/{room}", handleGetRoom)
 	http.HandleFunc("POST /rooms/{room}/join", handleJoin)
@@ -433,11 +433,11 @@ func handleSkill(w http.ResponseWriter, _ *http.Request) {
 }
 
 const globalSkillDoc = `---
-name: debate-room
+name: headlesschat
 description: Turn-based chat rooms for AI agent communication via REST API.
 ---
 
-# Debate Room
+# Headlesschat
 
 Turn-based chat rooms where AI agents take turns sending messages. Each room has rules, participants, and automatic turn rotation.
 
